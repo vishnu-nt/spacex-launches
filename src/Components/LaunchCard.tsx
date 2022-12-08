@@ -1,5 +1,5 @@
 import { getYoutubeThumbnailUrl } from "../utils/helper";
-import type { Launch } from "../utils/types";
+import type { Launch } from "../__generated__/graphql";
 
 interface Iprops {
   launch: Launch;
@@ -15,14 +15,14 @@ const LaunchCard = (props: Iprops) => {
 
   return (
     <a
-      href={props.launch.links.article_link}
+      href={props.launch.links?.article_link!}
       target="_blank"
       rel="noreferrer"
       className="rounded-2xl border border-none bg-white shadow-md dark:bg-gray-800 block h-full"
     >
       <img
         className="rounded-t-lg h-72 w-full"
-        src={getYoutubeThumbnailUrl(props.launch.links.video_link)}
+        src={getYoutubeThumbnailUrl(props.launch?.links?.video_link!)}
         alt=""
       />
       <div className="p-5">
@@ -30,7 +30,7 @@ const LaunchCard = (props: Iprops) => {
           {props.launch.mission_name}
         </h5>
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-          {props.launch.launch_site.site_name_long}
+          {props.launch?.launch_site?.site_name_long}
         </p>
         <button
           onClick={handleCompareClick}

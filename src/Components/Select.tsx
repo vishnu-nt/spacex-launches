@@ -24,7 +24,7 @@ const Select = ({ options, value, onChange }: IProps) => {
           <Combobox.Input
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Search.."
-            className="w-full border py-2 px-2"
+            className="w-full border border-gray-600 py-2 px-2 bg-transparent"
           />
           {open && (
             <Transition
@@ -39,13 +39,13 @@ const Select = ({ options, value, onChange }: IProps) => {
               <div className="relative">
                 <Combobox.Options
                   static
-                  className="absolute left-0 right-0 bg-white text-left shadow-md"
+                  className="absolute left-0 right-0 max-h-64 overflow-y-auto text-gray-900 dark:text-white dark:bg-gray-700 bg-white text-left shadow-md"
                 >
                   {filteredPeople.map((opt) => (
                     <Combobox.Option
                       key={opt.value}
                       value={opt.value}
-                      className="cursor-pointer border-b px-2 py-2 hover:bg-gray-50"
+                      className="cursor-pointer border-b px-2 py-2 hover:bg-gray-50 dark:hover:bg-gray-900"
                     >
                       {opt.label}
                     </Combobox.Option>
