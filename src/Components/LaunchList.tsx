@@ -28,7 +28,7 @@ const LaunchList = () => {
   useEffect(() => {
     refetch({
       offset: 0,
-      limit: 0,
+      limit: 10,
       ...filters,
     });
   }, [filters, refetch]);
@@ -100,7 +100,10 @@ const LaunchList = () => {
           hasMore
         >
           {data.launchesPast?.map((launch, i) => (
-            <div className="col-span-4" key={launch?.id || i}>
+            <div
+              className="col-span-12 sm:col-span-6 md:col-span-4"
+              key={launch?.id || i}
+            >
               <LaunchCard
                 launch={launch!}
                 setSelectedLaunches={setSelectedLaunches}

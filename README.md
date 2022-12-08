@@ -1,3 +1,7 @@
+
+# Its Live!
+The App is now live at [https://spacex-launches-tracker.netlify.app/](https://spacex-launches-tracker.netlify.app)
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
