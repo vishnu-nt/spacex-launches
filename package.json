@@ -20,7 +20,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "graphql-codegen -w && react-scripts start",
+    "start": "graphql-codegen && react-scripts start",
     "build": "graphql-codegen && react-scripts build",
     "test": "react-scripts test",
     "compile": "graphql-codegen",
